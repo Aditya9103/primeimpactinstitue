@@ -17,10 +17,13 @@ jobs:
 
       - name: Deploy to EC2 via SSH
         uses: appleboy/ssh-action@v1.0.3
+        env:
+          ENV_FILE: ${{ secrets.ENV_FILE }}
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
+          envs: ENV_FILE
           script: |
             # Create project directory if it doesn't exist
             mkdir -p ~/primeimpact/server
@@ -38,8 +41,8 @@ jobs:
             # Navigate to server folder specifically
             cd server
 
-            # Create/Update .env file securely
-            echo "${{ secrets.ENV_FILE }}" > .env
+            # Create/Update .env file securely (using printf to safely handle multiline)
+            printf "%s\n" "$ENV_FILE" > .env
 
             # Build the new Docker image
             sudo docker build -t primeimpact-api .
