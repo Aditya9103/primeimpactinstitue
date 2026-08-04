@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-brand-dark: #0a0e17;
+  /* Deep background */
+  --color-brand-card: #151a25;
+  /* Slightly lighter for cards */
+  --color-brand-card-hover: #1e2535;
+  --color-brand-yellow: #f8b417;
+  /* Bright call to action yellow */
+  --color-brand-yellow-hover: #e0a314;
+  --color-text-primary: #ffffff;
+  /* High visibility white */
+  --color-text-secondary: #F0F5FF;
+  /* visible white */
+}
+
+:root {
+  background-color: var(--color-brand-dark);
+  color: var(--color-text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Base text styling for high visibility */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+/* Premium utility classes */
+.glass-effect {
+  background: rgba(21, 26, 37, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #ffffff, #a0abc0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(to right, #f8b417, #fde047);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Force ReactQuill Editor to match public blog prose styling */
+.ql-editor {
+  @apply prose prose-invert prose-lg max-w-none text-white prose-p:text-white prose-li:text-white prose-headings:text-white prose-headings:font-black prose-a:text-brand-yellow hover:prose-a:text-[#d99820] prose-strong:text-white prose-img:rounded-xl prose-img:border prose-img:border-gray-800 leading-relaxed tracking-wide;
+}
