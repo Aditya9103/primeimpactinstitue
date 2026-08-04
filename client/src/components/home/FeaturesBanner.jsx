@@ -27,7 +27,7 @@ export default function FeaturesBanner() {
               </div>
               <div>
                 <h4 className="font-bold text-[14px] text-white mb-0.5 tracking-tight">{f.title} </h4>
-                <p className="text-[12px] text-white tracking-tight">{f.desc}</p>
+                <p className="text-[12px] text-[#dfeaff] tracking-tight ">{f.desc}</p>
               </div>
             </div>
           ))}
