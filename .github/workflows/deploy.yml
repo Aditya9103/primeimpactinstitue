@@ -1,0 +1,55 @@
+name: Deploy Node.js Backend to EC2
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'server/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            # Create project directory if it doesn't exist
+            mkdir -p ~/primeimpact/server
+            
+            # Navigate to directory
+            cd ~/primeimpact/server
+
+            # Pull latest changes from GitHub (requires git setup on EC2)
+            if [ ! -d ".git" ]; then
+              git clone https://github.com/Aditya9103/primeimpactinstitue.git .
+            else
+              git pull origin main
+            fi
+
+            # Navigate to server folder specifically
+            cd server
+
+            # Create/Update .env file securely
+            echo "${{ secrets.ENV_FILE }}" > .env
+
+            # Build the new Docker image
+            sudo docker build -t primeimpact-api .
+
+            # Stop and remove the old container if it exists
+            sudo docker stop primeimpact-api-container || true
+            sudo docker rm primeimpact-api-container || true
+
+            # Run the new container mapping port 3001
+            sudo docker run -d --name primeimpact-api-container -p 3001:3001 --restart always primeimpact-api
+            
+            # Prune old dangling images to save space
+            sudo docker image prune -f
