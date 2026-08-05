@@ -6,6 +6,7 @@ import BookDemoPage from './pages/BookDemoPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
+import AdminDashboard from './pages/admin/AdminDashboard';
 import Placeholder from './pages/Placeholder';
 import CoursesPage from './pages/CoursesPage';
 import CourseDetailPage from './pages/CourseDetailPage';
@@ -41,7 +42,7 @@ function App() {
 
         {/* Admin Routes with AdminLayout */}
         <Route path="/admin" element={<AdminLayout />}>
-          <Route path="dashboard" element={<Placeholder title="Admin Dashboard" />} />
+          <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="contacts" element={<AdminContacts />} />
           <Route path="demos" element={<AdminDemos />} />
           <Route path="blogs">

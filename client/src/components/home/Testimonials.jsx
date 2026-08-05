@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { ArrowRight, ArrowLeft, Star, Target } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Star, Target, User } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Testimonials() {
@@ -14,32 +14,32 @@ export default function Testimonials() {
     {
       text: "The course content is top-notch and the support from mentors is amazing. I got placed as an SEO Executive within 2 months!",
       name: "Sneha Sharma",
-      role: "SEO Executive at TechNova",
-      img: "11"
+      role: "SEO Executive ",
+      img: ""
     },
     {
       text: "Practical learning and real-world projects helped me build confidence. Now I'm working as a Social Media Manager!",
       name: "Rohit Verma",
-      role: "Social Media Manager at BrandCraft",
-      img: "12"
+      role: "Social Media Manager ",
+      img: ""
     },
     {
       text: "Best decision I made! The Google Ads course helped me grow my freelancing career to the next level.",
-      name: "Anjali Mehta",
-      role: "Freelance PPC Specialist",
-      img: "13"
-    },
-    {
-      text: "I was a complete beginner, but the step-by-step guidance made everything so easy to understand. Highly recommended!",
-      name: "Vikram Singh",
-      role: "Digital Marketing Executive",
-      img: "14"
-    },
-    {
-      text: "The resume and interview preparation sessions were the game changer for me. Secured a job before the course even ended.",
       name: "Priya Patel",
-      role: "Performance Marketer",
-      img: "15"
+      role: "Freelance Marketer",
+      img: ""
+    },
+    {
+      text: "I was struggling to find a job, but the placement assistance here is genuine. Currently working at a top agency.",
+      name: "Amit Kumar",
+      role: "Digital Marketing Executive",
+      img: ""
+    },
+    {
+      text: "The mentor's real-world insights were invaluable. I learned more here in 3 months than I did in my entire degree.",
+      name: "Neha Gupta",
+      role: "Content Strategist",
+      img: ""
     }
   ];
 
@@ -117,7 +117,7 @@ export default function Testimonials() {
             Hear from our students who turned their skills into successful careers.
           </p>
           <div>
-            <button 
+            <button
               onClick={() => navigate('/placements')}
               className="border border-brand-yellow/50 hover:border-brand-yellow px-6 py-2.5 rounded-md transition-colors text-[13px] font-bold flex items-center gap-3 text-white group"
             >
@@ -168,7 +168,13 @@ export default function Testimonials() {
                     </p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <img src={`https://i.pravatar.cc/100?img=${t.img}`} alt={t.name} className="w-10 h-10 rounded-full shadow-md" />
+                    {t.img ? (
+                      <img src={t.img} alt={t.name} className="w-10 h-10 rounded-full shadow-md object-cover" />
+                    ) : (
+                      <div className="w-10 h-10 rounded-full shadow-md bg-[#111] border border-brand-yellow/30 flex items-center justify-center text-brand-yellow font-bold text-[16px]">
+                        <User size={20} />
+                      </div>
+                    )}
                     <div className="flex flex-col">
                       <h5 className="font-bold text-white text-[13px]">{t.name}</h5>
                       <p className="text-[11px] text-gray-300 drop-shadow-sm">{t.role}</p>
