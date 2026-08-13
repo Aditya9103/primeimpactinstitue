@@ -1,23 +1,23 @@
-import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function PlacementsRecruiters() {
   const navigate = useNavigate();
 
   const recruiters = [
-    { name: "Google", text: "Google", color: "hover:text-[#4285F4]" },
-    { name: "Meta", text: "Meta", color: "hover:text-[#0668E1]" },
-    { name: "Amazon", text: "amazon", color: "hover:text-[#FF9900]" },
-    { name: "Deloitte", text: "Deloitte.", color: "hover:text-white" },
-    { name: "HubSpot", text: "HubSpot", color: "hover:text-[#FF7A59]" },
-    { name: "WPP", text: "WPP", color: "hover:text-white" },
-    { name: "Accenture", text: "accenture", color: "hover:text-[#A100FF]" },
-    { name: "IBM", text: "IBM", color: "hover:text-[#0530AD]" },
-    { name: "Adobe", text: "Adobe", color: "hover:text-[#FF0000]" },
-    { name: "Microsoft", text: "Microsoft", color: "hover:text-[#00A4EF]" },
-    { name: "Oracle", text: "ORACLE", color: "hover:text-[#F80000]" },
-    { name: "TCS", text: "tcs", color: "hover:text-[#0055A5]" },
+    { name: "Prime Time", text: "Prime Time", color: "hover:text-[#4285F4]" },
+    { name: "Time Cyber Media", text: "Time Cyber Media", color: "hover:text-[#0668E1]" },
+    { name: "PrimeImpact", text: "PrimeImpact", color: "hover:text-[#FF9900]" },
+    { name: "TechNexus", text: "TechNexus", color: "hover:text-[#00E5FF]" },
+    { name: "WebMobi", text: "WebMobi", color: "hover:text-[#FF3366]" },
+    { name: "DigiSolutions", text: "DigiSolutions", color: "hover:text-white" },
+    { name: "InvoTech", text: "InvoTech", color: "hover:text-[#00FF66]" },
+    { name: "NextGen Media", text: "NextGen Media", color: "hover:text-[#9900FF]" },
+    { name: "AppSierra", text: "AppSierra", color: "hover:text-[#FF0000]" },
+    { name: "Skyline Digital", text: "Skyline Digital", color: "hover:text-[#00BFFF]" },
+    { name: "Innovate Tech", text: "Innovate Tech", color: "hover:text-[#FFCC00]" },
+    { name: "Creative Pixels", text: "Creative Pixels", color: "hover:text-[#33FF33]" },
   ];
 
   return (

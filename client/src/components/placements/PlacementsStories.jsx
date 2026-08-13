@@ -7,30 +7,30 @@ export default function PlacementsStories() {
     {
       name: "Rohit Sharma",
       role: "SEO Executive",
-      company: "Deloitte",
-      package: "₹6 LPA",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+      company: "TimeCyberMedia",
+      package: "₹4.5 LPA",
+      image: "/student1.jpeg"
     },
     {
-      name: "Sneha Verma",
+      name: "Abhimanyu kumar",
       role: "Digital Marketer",
-      company: "WPP",
+      company: "PrimeImpact",
       package: "₹5 LPA",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+      image: "/student2.jpeg"
     },
     {
       name: "Aman Raj",
       role: "PPC Specialist",
-      company: "Amazon",
-      package: "₹7.5 LPA",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+      company: "TechNexus Solutions",
+      package: "₹4 LPA",
+      image: "/student3.jpeg"
     },
     {
       name: "Kavya Singh",
       role: "Social Media Manager",
-      company: "Meta",
-      package: "₹6.5 LPA",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+      company: "WebMobi Media",
+      package: "₹3.8 LPA",
+      image: "/student4.jpeg"
     }
   ];
 
@@ -55,7 +55,7 @@ export default function PlacementsStories() {
 
       <div className="w-full relative flex items-center justify-center">
         {/* Navigation buttons - Hidden on mobile, visible on lg */}
-        <button 
+        <button
           onClick={prevSlide}
           className="hidden lg:flex absolute left-0 z-20 w-12 h-12 bg-[#111317]/80 hover:bg-brand-yellow hover:text-black text-white rounded-full items-center justify-center transition-colors border border-gray-700 shadow-lg -translate-x-1/2"
         >
@@ -65,20 +65,20 @@ export default function PlacementsStories() {
         {/* Stories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {stories.map((story, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className={`group bg-[#111317]/80 backdrop-blur-xl border border-gray-800 rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:border-brand-yellow/30 hover:-translate-y-2 transition-all duration-300 ${
                 // Basic mobile carousel logic - hide non-active items on small screens
                 i === activeIndex ? "flex" : "hidden md:flex"
-              } flex-col`}
+                } flex-col`}
             >
               {/* Image Header */}
               <div className="w-full h-48 bg-gradient-to-t from-[#1a1f2c] to-[#0a0e17] flex items-end justify-center relative overflow-hidden pt-6">
                 {/* Decorative background circle */}
                 <div className="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-32 bg-brand-yellow/10 rounded-full blur-2xl"></div>
-                
-                <img 
-                  src={story.image} 
+
+                <img
+                  src={story.image}
                   alt={story.name}
                   className="w-40 h-40 object-cover object-top rounded-t-full border-4 border-[#111317] drop-shadow-2xl z-10"
                 />
@@ -99,7 +99,7 @@ export default function PlacementsStories() {
         </div>
 
         {/* Navigation buttons - Right */}
-        <button 
+        <button
           onClick={nextSlide}
           className="hidden lg:flex absolute right-0 z-20 w-12 h-12 bg-[#111317]/80 hover:bg-brand-yellow hover:text-black text-white rounded-full items-center justify-center transition-colors border border-gray-700 shadow-lg translate-x-1/2"
         >
@@ -110,8 +110,8 @@ export default function PlacementsStories() {
       {/* Mobile Pagination Dots */}
       <div className="flex md:hidden gap-2 mt-8">
         {stories.map((_, i) => (
-          <div 
-            key={i} 
+          <div
+            key={i}
             className={`w-2 h-2 rounded-full transition-all ${i === activeIndex ? "bg-brand-yellow w-6" : "bg-gray-700"}`}
           />
         ))}
