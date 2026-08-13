@@ -248,5 +248,285 @@ export const coursesDetailData = {
     testimonials: [
       { text: "Passed my Google certification on the first try and landed a job the next week.", author: "Rahul Das", role: "PPC Analyst", rating: 5 }
     ]
+  },
+  "content-marketing-course": {
+    id: "content-marketing-course",
+    title: "Content Marketing\nCourse",
+    tag: "Beginner",
+    description: "Learn how to create and distribute valuable, relevant, and consistent content to attract and retain a clearly defined audience.",
+    image: "/coursehero1.png",
+    heroStats: [
+      { label: "Duration", value: "1.5 Months", icon: "Clock" },
+      { label: "Live Projects", value: "4+ Projects", icon: "Briefcase" },
+      { label: "Certificate", value: "Industry Recognized", icon: "Award" },
+      { label: "Placement Support", value: "100% Assistance", icon: "Users" }
+    ],
+    statsRow: [
+      { value: "1500+", label: "Students Enrolled" },
+      { value: "4.6/5", label: "Average Rating" },
+      { value: "100%", label: "Placement Support" },
+      { value: "5+", label: "Content Tools" },
+      { value: "4+", label: "Live Projects" }
+    ],
+    about: {
+      title: "Become a Content Marketing Pro",
+      description: "Master the art of storytelling and learn to build content strategies that drive profitable customer action.",
+      features: [
+        "Content Strategy & Planning",
+        "Copywriting & Blogging",
+        "Video & Visual Content",
+        "Content Distribution",
+        "100% placement support"
+      ],
+      highlights: [
+        { title: "1.5 Months", subtitle: "Duration" },
+        { title: "4+", subtitle: "Live Projects" },
+        { title: "12+", subtitle: "Modules" },
+        { title: "5+", subtitle: "Tools" },
+        { title: "Lifetime", subtitle: "Access" },
+        { title: "100%", subtitle: "Placement" }
+      ]
+    },
+    curriculum: [
+      { module: "01", title: "Content Strategy Foundations", description: "Audience personas and brand voice.", topics: "4 Topics" },
+      { module: "02", title: "Copywriting", description: "Writing for web, blogs, and ads.", topics: "6 Topics" },
+      { module: "03", title: "Visual Content", description: "Creating graphics and infographics.", topics: "4 Topics" },
+      { module: "04", title: "Content Distribution", description: "SEO, social, and email distribution.", topics: "5 Topics" }
+    ],
+    tools: [
+      { name: "WordPress", icon: "SiWordpress", color: "#21759B" },
+      { name: "Canva", icon: "SiCanva", color: "#00C4CC" }
+    ],
+    instructors: [
+      { name: "Anita Desai", role: "Content Head", experience: "10+ years in content strategy for B2B brands." }
+    ],
+    testimonials: [
+      { text: "Learned how to write copy that actually converts!", author: "Sumeet K", role: "Content Writer", rating: 5 }
+    ]
+  },
+  "email-marketing-mastery": {
+    id: "email-marketing-mastery",
+    title: "Email Marketing\nMastery",
+    tag: "Advanced",
+    description: "Master email automation, sequence building, and list segmentation to drive massive ROI for ecommerce and B2B.",
+    image: "/coursehero1.png",
+    heroStats: [
+      { label: "Duration", value: "2 Months", icon: "Clock" },
+      { label: "Live Projects", value: "5+ Projects", icon: "Briefcase" },
+      { label: "Certificate", value: "Industry Recognized", icon: "Award" },
+      { label: "Placement Support", value: "100% Assistance", icon: "Users" }
+    ],
+    statsRow: [
+      { value: "1200+", label: "Students Enrolled" },
+      { value: "4.7/5", label: "Average Rating" },
+      { value: "100%", label: "Placement Support" },
+      { value: "6+", label: "Email Tools" },
+      { value: "5+", label: "Live Projects" }
+    ],
+    about: {
+      title: "Master Email Automation",
+      description: "Learn how to build lists from scratch and run automated sequences that make money while you sleep.",
+      features: [
+        "List Building Strategies",
+        "Email Copywriting & Design",
+        "Automated Sequences & Workflows",
+        "A/B Testing & Analytics",
+        "100% placement support"
+      ],
+      highlights: [
+        { title: "2 Months", subtitle: "Duration" },
+        { title: "5+", subtitle: "Live Projects" },
+        { title: "15+", subtitle: "Modules" },
+        { title: "6+", subtitle: "Tools" },
+        { title: "Lifetime", subtitle: "Access" },
+        { title: "100%", subtitle: "Placement" }
+      ]
+    },
+    curriculum: [
+      { module: "01", title: "Email Basics & Laws", description: "CAN-SPAM and GDPR compliance.", topics: "3 Topics" },
+      { module: "02", title: "List Building", description: "Lead magnets and opt-in pages.", topics: "5 Topics" },
+      { module: "03", title: "Copywriting for Email", description: "Subject lines and persuasive body copy.", topics: "6 Topics" },
+      { module: "04", title: "Automation Workflows", description: "Welcome series and abandoned cart.", topics: "7 Topics" },
+      { module: "05", title: "Analytics", description: "Open rates, CTR, and optimization.", topics: "4 Topics" }
+    ],
+    tools: [
+      { name: "Mailchimp", icon: "SiMailchimp", color: "#FFE01B" },
+      { name: "Klaviyo", icon: "SiKlaviyo", color: "#00E082" }
+    ],
+    instructors: [
+      { name: "Rajat Verma", role: "Email Marketing Specialist", experience: "Generated over $2M in revenue via email campaigns." }
+    ],
+    testimonials: [
+      { text: "My open rates went from 10% to 35% after this course.", author: "Preeti M", role: "Marketing Manager", rating: 5 }
+    ]
+  },
+  "marketing-analytics-course": {
+    id: "marketing-analytics-course",
+    title: "Marketing Analytics\nCourse",
+    tag: "Advanced",
+    description: "Learn to interpret data and make business decisions. Master Google Analytics 4, Tag Manager, and Looker Studio.",
+    image: "/coursehero1.png",
+    heroStats: [
+      { label: "Duration", value: "2.5 Months", icon: "Clock" },
+      { label: "Live Projects", value: "6+ Projects", icon: "Briefcase" },
+      { label: "Certificate", value: "Industry Recognized", icon: "Award" },
+      { label: "Placement Support", value: "100% Assistance", icon: "Users" }
+    ],
+    statsRow: [
+      { value: "2000+", label: "Students Enrolled" },
+      { value: "4.8/5", label: "Average Rating" },
+      { value: "100%", label: "Placement Support" },
+      { value: "5+", label: "Analytics Tools" },
+      { value: "6+", label: "Live Projects" }
+    ],
+    about: {
+      title: "Data-Driven Marketing",
+      description: "Move beyond guessing and learn to analyze marketing data to optimize campaigns and prove ROI.",
+      features: [
+        "Google Analytics 4 Mastery",
+        "Google Tag Manager Setup",
+        "Data Visualization with Looker Studio",
+        "Attribution Modeling",
+        "100% placement support"
+      ],
+      highlights: [
+        { title: "2.5 Months", subtitle: "Duration" },
+        { title: "6+", subtitle: "Live Projects" },
+        { title: "14+", subtitle: "Modules" },
+        { title: "5+", subtitle: "Tools" },
+        { title: "Lifetime", subtitle: "Access" },
+        { title: "100%", subtitle: "Placement" }
+      ]
+    },
+    curriculum: [
+      { module: "01", title: "Introduction to Analytics", description: "Why data matters in marketing.", topics: "3 Topics" },
+      { module: "02", title: "Google Analytics 4 (GA4)", description: "Setup, events, and reports.", topics: "8 Topics" },
+      { module: "03", title: "Google Tag Manager", description: "Container setup and triggers.", topics: "6 Topics" },
+      { module: "04", title: "Looker Studio", description: "Building custom marketing dashboards.", topics: "5 Topics" },
+      { module: "05", title: "Advanced Analysis", description: "Cohort analysis and attribution.", topics: "4 Topics" }
+    ],
+    tools: [
+      { name: "Google Analytics", icon: "SiGoogleanalytics", color: "#f8b417" },
+      { name: "Looker Studio", icon: "SiGoogleanalytics", color: "#4285F4" }
+    ],
+    instructors: [
+      { name: "Priya Singh", role: "Data Analyst", experience: "5+ years making sense of data for top agencies." }
+    ],
+    testimonials: [
+      { text: "GA4 finally makes sense to me! The dashboard project was my favorite.", author: "Arun S", role: "Digital Marketer", rating: 5 }
+    ]
+  },
+  "youtube-marketing-course": {
+    id: "youtube-marketing-course",
+    title: "YouTube Marketing\nCourse",
+    tag: "Beginner",
+    description: "Learn how to start, grow, and monetize a YouTube channel from scratch. Master video SEO and audience retention.",
+    image: "/coursehero1.png",
+    heroStats: [
+      { label: "Duration", value: "1 Month", icon: "Clock" },
+      { label: "Live Projects", value: "3+ Projects", icon: "Briefcase" },
+      { label: "Certificate", value: "Industry Recognized", icon: "Award" },
+      { label: "Placement Support", value: "100% Assistance", icon: "Users" }
+    ],
+    statsRow: [
+      { value: "3500+", label: "Students Enrolled" },
+      { value: "4.9/5", label: "Average Rating" },
+      { value: "100%", label: "Placement Support" },
+      { value: "4+", label: "Video Tools" },
+      { value: "3+", label: "Live Projects" }
+    ],
+    about: {
+      title: "Master YouTube Growth",
+      description: "Everything you need to know about the YouTube algorithm, thumbnails, and monetization.",
+      features: [
+        "Channel Setup & Branding",
+        "Video SEO & Ranking",
+        "Thumbnails & CTR Optimization",
+        "Monetization Strategies",
+        "100% placement support"
+      ],
+      highlights: [
+        { title: "1 Month", subtitle: "Duration" },
+        { title: "3+", subtitle: "Live Projects" },
+        { title: "10+", subtitle: "Modules" },
+        { title: "4+", subtitle: "Tools" },
+        { title: "Lifetime", subtitle: "Access" },
+        { title: "100%", subtitle: "Placement" }
+      ]
+    },
+    curriculum: [
+      { module: "01", title: "Channel Foundations", description: "Niche selection and branding.", topics: "3 Topics" },
+      { module: "02", title: "Video SEO", description: "Titles, tags, and descriptions.", topics: "5 Topics" },
+      { module: "03", title: "Thumbnails & CTR", description: "Designing clickable thumbnails.", topics: "4 Topics" },
+      { module: "04", title: "Audience Retention", description: "Scripting and editing for watch time.", topics: "4 Topics" },
+      { module: "05", title: "Monetization", description: "AdSense, sponsorships, and affiliates.", topics: "4 Topics" }
+    ],
+    tools: [
+      { name: "YouTube", icon: "FaYoutube", color: "#FF0000" },
+      { name: "Canva", icon: "SiCanva", color: "#00C4CC" }
+    ],
+    instructors: [
+      { name: "Kunal Shah", role: "YouTube Strategist", experience: "Grew multiple channels past 100k subscribers." }
+    ],
+    testimonials: [
+      { text: "My first video after the course got 10x more views than usual!", author: "Gaurav P", role: "YouTuber", rating: 5 }
+    ]
+  },
+  "google-ads-certification": {
+    id: "google-ads-certification",
+    title: "Google Ads Certification\nCourse",
+    tag: "Specialized",
+    description: "Become a certified Google Ads expert. Learn how to run profitable Search, Display, YouTube, and Performance Max campaigns.",
+    image: "/coursehero1.png", 
+    heroStats: [
+      { label: "Duration", value: "2 Months", icon: "Clock" },
+      { label: "Live Projects", value: "6+ Projects", icon: "Briefcase" },
+      { label: "Certificate", value: "Google Partner", icon: "Award" },
+      { label: "Placement Support", value: "100% Assistance", icon: "Users" }
+    ],
+    statsRow: [
+      { value: "2500+", label: "Students Enrolled" },
+      { value: "4.9/5", label: "Average Rating" },
+      { value: "100%", label: "Placement Support" },
+      { value: "5+", label: "Ad Formats" },
+      { value: "6+", label: "Live Projects" }
+    ],
+    about: {
+      title: "Master PPC and Google Ads",
+      description: "Learn how to generate high-quality leads and sales for any business using advanced Google Ads strategies and optimization techniques.",
+      features: [
+        "Search, Display, and Video Campaigns",
+        "Conversion Tracking & Google Tag Manager",
+        "Bidding Strategies & Budget Optimization",
+        "Official Google Ads Certification Prep",
+        "100% placement support"
+      ],
+      highlights: [
+        { title: "2 Months", subtitle: "Duration" },
+        { title: "6+", subtitle: "Live Projects\nReal-time Projects" },
+        { title: "18+", subtitle: "Modules\nComprehensive Learning" },
+        { title: "1", subtitle: "Certification\nGoogle Official" },
+        { title: "Lifetime", subtitle: "Access\nCourse Materials" },
+        { title: "100%", subtitle: "Placement\nPlacement Support" }
+      ]
+    },
+    curriculum: [
+      { module: "01", title: "Introduction to Google Ads", description: "Account structure and auction dynamics.", topics: "4 Topics" },
+      { module: "02", title: "Search Campaigns", description: "Keyword match types, ad copy, and extensions.", topics: "7 Topics" },
+      { module: "03", title: "Display Network", description: "Audience targeting and banner ad design.", topics: "5 Topics" },
+      { module: "04", title: "YouTube Video Ads", description: "In-stream ads and video remarketing.", topics: "4 Topics" },
+      { module: "05", title: "Performance Max", description: "AI-driven campaign setup.", topics: "3 Topics" },
+      { module: "06", title: "Conversion Tracking", description: "Setting up GTM and tracking pixels.", topics: "5 Topics" }
+    ],
+    tools: [
+      { name: "Google Ads", icon: "SiGoogleads", color: "#f8b417" },
+      { name: "Google Analytics", icon: "SiGoogleanalytics", color: "#f8b417" }
+    ],
+    instructors: [
+      { name: "Amit Kumar", role: "Google Ads Expert", experience: "6+ years of experience in digital marketing specifically adwords for Fortune 500 clients." }
+    ],
+    testimonials: [
+      { text: "Passed my Google certification on the first try and landed a job the next week.", author: "Rahul Das", role: "PPC Analyst", rating: 5 }
+    ]
   }
 };
