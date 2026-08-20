@@ -1,58 +1,43 @@
-name: Deploy Node.js Backend to EC2
+name: Deploy Backend to EC2
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'server/**'
+      - "server/**"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
 
-      - name: Deploy to EC2 via SSH
+    steps:
+      - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.3
-        env:
-          ENV_FILE: ${{ secrets.ENV_FILE }}
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          envs: ENV_FILE
+
           script: |
-            # Create project directory if it doesn't exist
-            mkdir -p ~/primeimpact/server
-            
-            # Navigate to directory
-            cd ~/primeimpact/server
+            set -e
 
-            # Pull latest changes from GitHub (requires git setup on EC2)
-            if [ ! -d ".git" ]; then
-              git clone https://github.com/Aditya9103/primeimpactinstitue.git .
-            else
-              git pull origin main
-            fi
+            cd /opt/apps/primeimpact
 
-            # Navigate to server folder specifically
+            git pull origin main
+
             cd server
 
-            # Create/Update .env file securely (using printf to safely handle multiline)
-            printf "%s\n" "$ENV_FILE" > .env
+            docker build -t primeimpact-api:latest .
 
-            # Build the new Docker image
-            sudo docker build -t primeimpact-api .
+            docker stop primeimpact-api 2>/dev/null || true
+            docker rm primeimpact-api 2>/dev/null || true
 
-            # Stop and remove the old container if it exists
-            sudo docker stop primeimpact-api-container || true
-            sudo docker rm primeimpact-api-container || true
+            docker run -d \
+              --name primeimpact-api \
+              --restart unless-stopped \
+              --env-file /opt/apps/primeimpact/env/production.env \
+              -p 127.0.0.1:3001:3001 \
+              primeimpact-api:latest
 
-            # Run the new container mapping port 3001
-            sudo docker run -d --name primeimpact-api-container --env-file .env -p 3001:3001 --restart always primeimpact-api
-            
-            # Prune old dangling images to save space
-            sudo docker image prune -f
+            docker image prune -f
