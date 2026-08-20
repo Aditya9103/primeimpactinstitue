@@ -53,6 +53,6 @@ app.use(errorHandler);
 
 const PORT = ENV.PORT;
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running in ${ENV.NODE_ENV} mode on port ${PORT}`);
 });

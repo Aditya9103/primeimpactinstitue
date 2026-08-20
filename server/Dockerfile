@@ -12,6 +12,9 @@ RUN npm ci --omit=dev
 # Copy source code
 COPY . .
 
+# Switch to non-root user for security
+USER node
+
 # Expose port
 EXPOSE 3001
 
