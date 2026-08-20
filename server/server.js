@@ -33,11 +33,11 @@ if (ENV.NODE_ENV === 'development') {
 
 // Routes
 app.get('/', (req, res) => {
-    res.send('Prime Impact API is running on root...');
+    res.send('Prime Impact API is running on root......');
 });
 
 app.get('/api', (req, res) => {
-    res.send('Prime Impact API is running...');
+    res.send('Prime Impact API is running.....');
 });
 
 // Setup API Routes
