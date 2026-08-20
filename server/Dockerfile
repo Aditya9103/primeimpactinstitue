@@ -18,5 +18,8 @@ USER node
 # Expose port
 EXPOSE 3001
 
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+    CMD wget -q --spider http://127.0.0.1:3001/ || exit 1
+
 # Start the application
 CMD ["npm", "start"]
